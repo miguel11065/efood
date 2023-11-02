@@ -1,42 +1,34 @@
-import ListaRestaurante from '../../container/ListaRestaurante'
 import pizza from '../../assets/images/prato1.png'
-import Restaurantes from '../../models/Restaurantes'
 import HeaderRestaurante from '../../components/HeaderRestaurante'
+import PratosModels from '../../models/PratosModels'
+import ListaPratos from '../../container/ListaPratos'
 
-const lista: Restaurantes[] = [
+const lista: PratosModels[] = [
   {
     id: 1,
     image: pizza,
-    infos: ['Destaque do Dia', 'Japonesa'],
-    title: 'Nome do restaurante',
-    rate: 4.5,
+    title: 'Nome do Prato',
     description:
       'descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao '
   },
   {
     id: 2,
     image: pizza,
-    infos: ['Japonesa'],
-    title: 'Nome do restaurante',
-    rate: 4.5,
+    title: 'Nome do Prato',
     description:
       'descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao '
   },
   {
     id: 3,
     image: pizza,
-    infos: ['Japonesa'],
-    title: 'Nome do restaurante',
-    rate: 4.5,
+    title: 'Nome do Prato',
     description:
       'descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao '
   },
   {
     id: 4,
     image: pizza,
-    infos: ['Japonesa'],
-    title: 'Nome do restaurante',
-    rate: 4.5,
+    title: 'Nome do Prato',
     description:
       'descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao '
   }
@@ -45,7 +37,7 @@ const lista: Restaurantes[] = [
 const Home = () => (
   <>
     <HeaderRestaurante />
-    <ListaRestaurante restaurantes={lista} />
+    <ListaPratos pratos={lista} />
   </>
 )
 
