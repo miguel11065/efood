@@ -1,16 +1,9 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { TagContainer } from '../Tag/styles'
 
 export const Card = styled.div`
   margin-bottom: 48px;
   position: relative;
-
-  // ${TagContainer} {
-  //   position: absolute;
-  //   top: 16px;
-  //   right: 16px;
-  // }
 `
 
 export const CardContainer = styled.div`
