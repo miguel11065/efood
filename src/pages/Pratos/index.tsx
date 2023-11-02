@@ -1,6 +1,7 @@
 import ListaRestaurante from '../../container/ListaRestaurante'
 import pizza from '../../assets/images/prato1.png'
 import Restaurantes from '../../models/Restaurantes'
+import HeaderRestaurante from '../../components/HeaderRestaurante'
 
 const lista: Restaurantes[] = [
   {
@@ -43,6 +44,7 @@ const lista: Restaurantes[] = [
 
 const Home = () => (
   <>
+    <HeaderRestaurante />
     <ListaRestaurante restaurantes={lista} />
   </>
 )
