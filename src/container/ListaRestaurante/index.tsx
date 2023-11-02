@@ -1,39 +1,25 @@
 import Restaurante from '../../components/Restaurante'
 import { List } from './styles'
-import restFoto1 from '../../assets/images/restaurante1.png'
-import restFoto2 from '../../assets/images/restaurante2.png'
+import Restaurantes from '../../models/Restaurantes'
 
-const ListaRestaurante = () => (
+type Props = {
+  restaurantes: Restaurantes[]
+}
+
+const ListaRestaurante = ({ restaurantes }: Props) => (
   <div className="container">
     <List>
-      <Restaurante
-        image={restFoto1}
-        infos={['Destaque do Dia', 'Japonesa']}
-        title="Nome do restaurante"
-        rate={4.5}
-        description="descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao "
-      />
-      <Restaurante
-        image={restFoto2}
-        infos={['Japonesa']}
-        title="Nome do restaurante"
-        rate={4.5}
-        description="descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao "
-      />
-      <Restaurante
-        image={restFoto2}
-        infos={['Japonesa']}
-        title="Nome do restaurante"
-        rate={4.5}
-        description="descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao "
-      />
-      <Restaurante
-        image={restFoto2}
-        infos={['Japonesa']}
-        title="Nome do restaurante"
-        rate={4.5}
-        description="descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao "
-      />
+      {restaurantes.map((restaurante) => (
+        <Restaurante
+          key={restaurante.id}
+          id={restaurante.id}
+          image={restaurante.image}
+          infos={restaurante.infos}
+          title={restaurante.title}
+          rate={restaurante.rate}
+          description={restaurante.description}
+        />
+      ))}
     </List>
   </div>
 )

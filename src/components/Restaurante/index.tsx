@@ -12,8 +12,10 @@ import {
   Titulo,
   TituloContainer
 } from './styles'
+import { Link } from 'react-router-dom'
 
 type Props = {
+  id: number
   image: string
   infos: string[]
   title: string
@@ -40,7 +42,9 @@ const Restaurante = ({ image, infos, title, rate, description }: Props) => (
         </AvaliacaoContainer>
       </TituloContainer>
       <Descricao>{description}</Descricao>
-      <Botao>Saiba Mais</Botao>
+      <Link to="/restaurante">
+        <Botao>Saiba Mais</Botao>
+      </Link>
     </CardContainer>
   </Card>
 )
